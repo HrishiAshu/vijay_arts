@@ -1,16 +1,11 @@
-//step 1  npm install @reduxjs/toolkit react-redux
-
-
-//step 2 configure store
-
+// src/store/store.js
 import { configureStore } from "@reduxjs/toolkit";
-
+import userSlice from "../Store/AppSlice";// Ensure the path is correct
 
 const store = configureStore({
     reducer: {
-        //your slices here
-        user: userReducer
+        user: userSlice
     }
-})
+});
 
-export default AppStore
+export default store;
